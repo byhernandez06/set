@@ -90,9 +90,9 @@ const Blog = () => {
             style={{
               color: "#fff",
               fontSize: "36px",
-              fontStyle: "italic",
+              // fontStyle: "italic",
               marginBottom: "10px",
-              fontWeight: "300",
+              fontWeight: "800",
             }}
           >
             Nuestra trayectoria nos respalda
@@ -108,7 +108,7 @@ const Blog = () => {
               textTransform: "uppercase",
             }}
           >
-            Clientes que han confiado en nosotros a lo largo de los años
+            Clientes que han confiado en nosotros
           </h3>
 
           <p
@@ -118,6 +118,7 @@ const Blog = () => {
               maxWidth: "700px",
               margin: "0 auto",
               lineHeight: "1.5",
+              fontWeight: "800"
             }}
           >
               Estas son algunas organizaciones
