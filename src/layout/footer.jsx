@@ -14,8 +14,8 @@ const Footer = () => {
                 </Link>
                 <p>Transforma tu negocio con soluciones tecnológicas personalizadas y de alto rendimiento. Estamos aquí para ayudarte a crecer.</p>
                 <ul className="social-links">
-                  {/* <li><Link to="https://www.facebook.com/" target="_blank"><i className="ri-facebook-fill"></i></Link></li> */}
-                  <li><Link to="https://www.instagram.com/p/DISoEzOOp5I/?igsh=dDdvZW9tZWwxMDBt" target="_blank"><i className="ri-instagram-line"></i></Link></li>
+                  <li><Link to="https://wa.me/50672995748" target="_blank"><i className="ri-whatsapp-fill"></i></Link></li>
+                  <li><Link to="https://www.instagram.com/set_technology/" target="_blank"><i className="ri-instagram-line"></i></Link></li>
                   {/* <li><Link to="https://www.linkedin.com/" target="_blank"><i className="ri-linkedin-fill"></i></Link></li> */}
                   {/* <li><Link to="https://www.youtube.com/" target="_blank"><i className="ri-youtube-line"></i></Link></li> */}
                 </ul>

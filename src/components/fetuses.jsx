@@ -1,41 +1,41 @@
 import React from 'react'
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 
 const featuresData = [
     {
         id: 1,
         icon: "fi fi-tr-file-user",
-        title: "Impulsamos tu presencia digital",
-        desc: "Desarrollamos soluciones web optimizadas para mejorar tu alcance y visibilidad en línea.",
+        title: "Desarrollo de software",
+        desc: "Creamos tus ideas en tecnología. Creamos software que impulsan negocios, automatizan procesos y elevan experiencias",
         link: "/about"
     },
     {
         id: 2,
         icon: "fi fi-tr-graphic-style",
-        title: "De la idea al desarrollo web",
-        desc: "Convertimos tus conceptos en plataformas digitales funcionales, eficientes y escalables.",
+        title: "Desarrollo de apps",
+        desc: "Convertimos tus conceptos en plataformas digitales funcionales, eficientes y escalables",
         link: "/about"
     },
     {
         id: 3,
         icon: "fi fi-tr-user-astronaut",
-        title: "Innovación para resultados óptimos",
-        desc: "Aplicamos tecnología de vanguardia para maximizar el rendimiento y la experiencia del usuario.",
+        title: "Automatización con IA",
+        desc: "A traves de esta eliminamos tareas repetitivas, minimizamos errores y dependencia de un solo factor humano. Liberamos el tiempo para tareas de valor que permitan el crecimiento de la empresa",
         link: "/about"
     },
     {
         id: 4,
         icon: "fi fi-tr-biking-mountain",
-        title: "Soluciones digitales a medida",
-        desc: "Creamos sitios y aplicaciones adaptadas a tus necesidades, con diseño y funcionalidad excepcionales.",
+        title: "Desarrollo Web",
+        desc: "Creamos sitios y aplicaciones adaptadas a tus necesidades, con diseño y funcionalidad excepcionales",
         link: "/about"
     },
 
 ]
 const Fetuses = () => {
     return (
-        <section id="features" className="fetuses-area pt-70">
+        <section id="features" className="fetuses-area pt-70" style={{ marginTop: 100 }}>
             <div className="container-fluid">
                 <div className="row justify-content-center g-0">
                     {
@@ -67,8 +67,6 @@ const Fetuses = () => {
                             )
                         })
                     }
-
-
 
                 </div>
             </div>

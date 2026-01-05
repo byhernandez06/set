@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import logo  from "../assets/img/logo-set2.png"
+import logo  from "../assets/img/set-logo-blanco.svg"
 
 const menuList = [
     {
@@ -52,9 +52,16 @@ const menuList = [
 
     //     ]
     // },
+    // {
+    //     id: "3",
+    //     path: "/portfolio",
+    //     name: "Proyectos",
+    //     dropDownList: false
+    // },
+
     {
         id: "3",
-        path: "/portfolio",
+        path: "/blog",
         name: "Proyectos",
         dropDownList: false
     },
@@ -137,7 +144,7 @@ const Header = () => {
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
                         {/* <h2><span className="grd-color-1" >SET</span></h2> */}
-                        <img src={logo} alt="logo" />
+                        <img src={logo} alt="logo" style={{ width: 100 }} />
                     </Link>
                     <div onClick={() => setMobileNavActive(true)} className="navbar-toggler text-decoration-none">
                         <span className="burger-menu">

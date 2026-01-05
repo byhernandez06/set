@@ -122,13 +122,10 @@
     .fetuses-area .single-fetuses-box .icon i {
         font-size: 50px;
         margin-bottom: 15px;
-        background-image: linear-gradient(315deg, #7F00FF 35%, #E100FF 50%);
-        background-size: 100%;
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
+        color: #F24738 !important;
+        background: none !important;
+        -webkit-text-fill-color: #F24738 !important; 
+        -moz-text-fill-color: #F24738 !important;
     }
     .fetuses-area .single-fetuses-box h3 {
         font-size: 22px;

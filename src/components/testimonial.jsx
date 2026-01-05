@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from "swiper/modules"
+import { Autoplay, Navigation } from "swiper/modules"
 import 'swiper/css';
 
 import user_1 from '../assets/img/user-1.jpg'
@@ -12,36 +12,20 @@ import TestimonialCard from './common/testimonialCard';
 const testimonialData = [
     {
         id: 1,
-        name: "Aloin Lden",
-        position: "Web Developer",
+        name: "Misión",
+        position: "",
         img: user_1,
-        rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
+        rating: 4,
+        review: 'Brindar siempre un servicio oportuno, de calidad y apegado a nuestra filosofía de cliente céntrica.'
     },
     {
         id: 2,
-        name: "Jacob Daniels",
-        position: "Engineer",
+        name: "Visión",
+        position: "",
         img: user_3,
         rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
-    },
-    {
-        id: 3,
-        name: "Aloin Lden",
-        position: "Web Developer",
-        img: user_4,
-        rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
-    },
-    {
-        id: 4,
-        name: "Jacob Daniels",
-        position: "Engineer",
-        img: user_2,
-        rating: 5,
-        review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
-    },
+        review: 'Ser la alternativa preferida dentro de los mercados que operamos en desarrollo de software, aplicaciones y sitios web.'
+    }
 ]
 
 const Testimonial = () => {
@@ -54,16 +38,20 @@ const Testimonial = () => {
                     spaceBetween={30}
                     slidesPerView={1}
                     loop
+                    autoplay={{
+                        delay: 4000,
+                        disableOnInteraction: false
+                    }}
                     onBeforeInit={(swiper) => {
                         swiperRef.current = swiper;
                     }}
                     className='image-courser'
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                 >
                     {
                         testimonialData.map(({ id, img, position, rating, review, name }) => {
                             return (
-                                <SwiperSlide key={id}> <TestimonialCard  img={img} position={position} name={name} rating={rating} review={review} /> </SwiperSlide>
+                                <SwiperSlide key={id}> <TestimonialCard img={img} position={position} name={name} rating={rating} review={review} /> </SwiperSlide>
                             )
                         })
                     }
@@ -73,21 +61,7 @@ const Testimonial = () => {
                     </div>
                 </Swiper>
 
-                {
-                    testimonialData.map(({ id, img }) => {
-                        return (
-                            <div key={id} className="user">
-                                <img src={img} alt="image" />
-                            </div>
-                        )
-                    })
-                }
             </div>
-            <div className="star"></div>
-            <div className="star"></div>
-            <div className="star"></div>
-            <div className="star"></div>
-            <div className="star"></div>
         </div>
     )
 }

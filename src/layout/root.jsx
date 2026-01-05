@@ -28,7 +28,7 @@ const RootLayout = () => {
         scrollProgress.addEventListener("click", () => {
             document.documentElement.scrollTop = 0;
         });
-        scrollProgress.style.background = `conic-gradient(#7f00ff ${scrollValue}%, #9094a6 ${scrollValue}%)`;
+        scrollProgress.style.background = `conic-gradient(#F24738 ${scrollValue}%, #9094a6 ${scrollValue}%)`;
     };
 
     // ------------- button hover effect

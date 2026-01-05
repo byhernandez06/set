@@ -7,7 +7,7 @@ import Blog from "../pages/blog";
 
 import BlogDetails from "../pages/blog-details";
 import AboutUs from "../pages/about-us";
-import Team from "../pages/team";
+// import Team from "../pages/team";
 import Pricing from "../pages/pricing";
 import NotFound from "../pages/404";
 import BlogSidebar from "../pages/blog-sidebar";
@@ -48,10 +48,10 @@ export const router = createBrowserRouter([
                 path: "/about",
                 element: <AboutUs />
             },
-            {
-                path: "/team",
-                element: <Team />
-            },
+            // {
+            //     path: "/team",
+            //     element: <Team />
+            // },
             {
                 path: "/pricing",
                 element: <Pricing />

@@ -11,7 +11,7 @@ const Portfolio = () => {
       <PageHeader pageName={"Portafolio"} />
       <Gallery />
       <Brands />
-      <InstagramGallery />
+      {/* <InstagramGallery /> */}
       <ScrollRestoration/>
     </>
   )

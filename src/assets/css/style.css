@@ -40,7 +40,7 @@ Default CSS
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
 
 :root {
-  --main_color: #7f00ff;
+  --main_color: #F24738;
   --content_color: #9094a6;
   --white_color: #fff;
   --font-size: 17px;
@@ -48,7 +48,7 @@ Default CSS
 }
 
 .grd-color-1 {
-  background-image: linear-gradient(315deg, #7F00FF 35%, #E100FF 50%);
+  background-image: linear-gradient(315deg, #F24738 35%, #F24738 50%);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -58,7 +58,6 @@ Default CSS
 }
 
 .section-bg {
-  background-image: url(../img/section-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -101,7 +100,7 @@ body {
 }
 
 img {
-  max-width: 75%;
+  max-width: 95%;
   height: auto;
 }
 
@@ -121,7 +120,8 @@ Default Button Style
   background-size: 200% auto;
   font-weight: 500;
   font-size: var(--font-size);
-  background-image: linear-gradient(to right, #7F00FF 0%, #E100FF 50%, #7F00FF 100%);
+  /* background-image: linear-gradient(to right, #F24738 0%, #F24738 50%, #F24738 100%); */
+  background-color: #F24738;
   transition: var(--transition);
   position: relative;
 }
@@ -197,7 +197,8 @@ a {
   font-weight: normal;
   color: var(--white_color);
   margin-bottom: 20px;
-  background-color: rgba(127, 0, 255, 0.29);
+  /* background-color: rgba(127, 0, 255, 0.29); */
+  background-color: var(--main_color);
   border-radius: 5px;
   display: inline-block;
   padding: 5px 15px;
@@ -1177,11 +1178,12 @@ Banner Area CSS
 
 .banner-area .content {
   padding-left: 65px;
-  margin-top: 130px;
+  margin-top: 20px;
 }
 
 .banner-area span.banner-top-title {
-  background-color: rgba(127, 12, 255, 0.3215686275);
+  /* background-color: rgba(127, 12, 255, 0.3215686275); */
+  background-color: #F24738;
   padding: 5px 20px;
   border-radius: 5px;
   font-size: 16px;
@@ -1191,7 +1193,7 @@ Banner Area CSS
 }
 
 .banner-area .content h1 {
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -1319,18 +1321,38 @@ Banner Area CSS
   margin-bottom: 0;
 }
 
-.section-banner {
-  background-image: url(../img/section-bg-2.jpg);
+.section-banner, 
+.section-banner-blog,
+.section-banner-contact {
+  background-image: url(../img/workgroup.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 200px;
   padding-bottom: 100px;
   position: relative;
+  height: 80vh;
 }
 
-.section-banner:before {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), #000000 145%);
+.section-banner {
+  background-image: url(../img/workgroup.jpeg);
+}
+
+.section-banner-blog {
+  background-image: url(../img/workgroup2.jpeg);
+  background-size: cover;
+  background-position: top center; /* <- mover hacia arriba */
+  background-repeat: no-repeat;
+}
+
+.section-banner-contact {
+  background-image: url(../img/workgroup3.jpeg);
+}
+
+.section-banner::before,
+.section-banner-blog::before,
+.section-banner-contact::before {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), #000000 145%); */
   position: absolute;
   content: "";
   top: 0;
@@ -1341,12 +1363,16 @@ Banner Area CSS
   transition: var(--transition);
 }
 
-.section-banner .section-banner-title {
+.section-banner .section-banner-title,
+.section-banner-blog .section-banner-title,
+.section-banner-contact .section-banner-title {
   z-index: 0;
   position: relative;
 }
 
-.section-banner .section-banner-title::before {
+.section-banner .section-banner-title::before,
+.section-banner-blog .section-banner-title::before,
+.section-banner-contact .section-banner-title::before {
   position: absolute;
   content: "";
   width: 100px;
@@ -1355,23 +1381,31 @@ Banner Area CSS
   top: -45%;
 }
 
-.section-banner h1 {
+.section-banner h1,
+.section-banner-blog h1,
+.section-banner-contact h1 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.section-banner .breadcrumb .breadcrumb-item a {
+.section-banner .breadcrumb .breadcrumb-item a,
+.section-banner-blog .breadcrumb .breadcrumb-item a,
+.section-banner-contact .breadcrumb .breadcrumb-item a {
   color: var(--white_color);
 }
 
-.section-banner .breadcrumb-item+.breadcrumb-item::before {
+.section-banner .breadcrumb-item+.breadcrumb-item::before,
+.section-banner-blog .breadcrumb-item+.breadcrumb-item::before,
+.section-banner-contact .breadcrumb-item+.breadcrumb-item::before {
   color: var(--paragraphColor);
   content: var(--bs-breadcrumb-divider, "/");
 }
 
-.section-banner .breadcrumb-item.active {
-  color: var(--paragraphColor);
+.section-banner .breadcrumb-item.active,
+.section-banner-blog .breadcrumb-item.active,
+.section-banner-contact .breadcrumb-item.active {
+  color: var(--white_color);
 }
 
 /*================================================
@@ -1399,7 +1433,7 @@ Fetuses Area CSS
 }
 
 .fetuses-area .single-fetuses-box:hover .icon i {
-  background-image: linear-gradient(315deg, #7F00FF 35%, #E100FF 50%);
+  background-image: linear-gradient(315deg, #F24738 35%, #F24738 50%);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -1482,7 +1516,7 @@ Section Title CSS
   padding: 1em 3em;
   background-size: 200% auto;
   font-weight: 500;
-  background-image: linear-gradient(to right, #7F00FF 0%, #E100FF 50%, #7F00FF 100%);
+  background-image: linear-gradient(to right, #F24738 0%, #F24738 50%, #F24738 100%);
   transition: var(--transition);
 }
 
@@ -1976,6 +2010,10 @@ Testimonial Area CSS
 /*================================================
 Blog Area CSS
 =================================================*/
+.blog-area {
+  background-color: #fff;
+}
+
 .blog-area .item {
   margin-bottom: 30px;
 }
@@ -2126,7 +2164,7 @@ Blog Area CSS
 }
 
 .article-area .item:before {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #000000 130%);
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0), #000000 130%); */
   position: absolute;
   content: "";
   top: 0px;
@@ -2974,4 +3012,59 @@ Comments Area CSS
 .comments-area .comment-respond .form-submit input:focus {
   color: var(--white_color);
   background-color: var(--optionalColor);
+}
+
+
+
+
+
+.section-banner .container,
+.section-banner-blog .container,
+.section-banner-contact .container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1400px) {
+  .section-banner .container,
+  .section-banner-blog .container,
+  .section-banner-contact .container {
+    bottom: 50px; /* Un poco más de espacio en pantallas grandes */
+  }
+}
+
+
+.section-banner,
+.section-banner-blog,
+.section-banner-contact {
+  position: relative;
+}
+
+.section-banner::before,
+.section-banner-blog::before,
+.section-banner-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* Oscurece la imagen */
+  z-index: 1;
+}
+
+.section-banner *,
+.section-banner-blog *,
+.section-banner-contact * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  background-image: linear-gradient(to right, #F24738 0%, #F24738 50%, #F24738 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
